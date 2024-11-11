@@ -1,7 +1,9 @@
 (function () {
   // Retrieve settings from global configuration object or set defaults
   const settings = window.fullyAIWidgetSettings || {};
-  const url = settings.url || "https://www.gofully.ai/"; // FullyAI URL or specific page
+  const companyId = settings.companyId;
+  const assistantId = settings.assistantId;
+  const url = `https://fully-frontend-git-dev-fully.vercel.app/company/${companyId}/assistant/${assistantId}/chat?initialMode=typeMode`;
   const position = settings.position || "bottom-right"; // Default position of widget
   const delay = settings.delay || 0; // Delay before showing the button
 
