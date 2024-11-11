@@ -1,7 +1,7 @@
 (function () {
   // Retrieve settings from global configuration object or set defaults
   const settings = window.fullyAIWidgetSettings || {};
-  const externalUrl = settings.url || "https://fullyai.com"; // FullyAI URL or specific page
+  const url = "https://www.gofully.ai/"; // FullyAI URL or specific page
   const position = settings.position || "bottom-right"; // Default position of widget
   const delay = settings.delay || 0; // Delay before loading the widget
 
@@ -31,7 +31,7 @@
     // Create an iframe and set the source to the FullyAI URL
     console.log("[Widget] - Creating iframe");
     const iframe = document.createElement("iframe");
-    iframe.src = externalUrl;
+    iframe.src = url;
     iframe.style.width = "100%"; // Set dimensions as required
     iframe.style.height = "100%";
     iframe.style.border = "none";
