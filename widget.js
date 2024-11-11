@@ -1,7 +1,7 @@
 (function () {
   // Retrieve settings from global configuration object or set defaults
   const settings = window.fullyAIWidgetSettings || {};
-  const url = "https://www.gofully.ai/"; // FullyAI URL or specific page
+  const url = settings.url || "https://www.gofully.ai/"; // FullyAI URL or specific page
   const position = settings.position || "bottom-right"; // Default position of widget
   const delay = settings.delay || 0; // Delay before showing the button
 
