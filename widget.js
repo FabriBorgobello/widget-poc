@@ -1,9 +1,11 @@
+const BASE_URL = "https://fully-frontend-git-dev-fully.vercel.app";
+
 (function () {
   // Retrieve settings from global configuration object or set defaults
   const settings = window.fullyAIWidgetSettings || {};
   const companyId = settings.companyId;
   const assistantId = settings.assistantId;
-  const url = `https://fully-frontend-git-dev-fully.vercel.app/company/${companyId}/assistant/${assistantId}/chat?initialMode=typeMode`;
+  const url = `${BASE_URL}/company/${companyId}/assistant/${assistantId}/chat?initialMode=typeMode`;
   const position = settings.position || "bottom-right"; // Default position of widget
   const delay = settings.delay || 0; // Delay before showing the button
 
@@ -39,6 +41,7 @@
     iframe.style.width = "100%";
     iframe.style.height = "100%";
     iframe.style.border = "none";
+    iframe.allow = `camera ${BASE_URL}; microphone ${BASE_URL}`;
     widgetContainer.appendChild(iframe);
 
     // Add the widget to the body of the host page
